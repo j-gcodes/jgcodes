@@ -6,6 +6,6 @@
     fwrite ($fp, $username . "," . $password . "\n");
     $fclose ($fp);
     echo ("account created");
-    header("Location: "login.html"); 
+    header("Location: "signin.html"); 
     die();
 ?>
